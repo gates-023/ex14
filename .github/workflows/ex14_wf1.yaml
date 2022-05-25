@@ -21,5 +21,7 @@ jobs:
       - name: Upload output file
         uses: actions/upload-artifact@v3
         with:
-          name: test
-          path: /home/runner/work/ex14/ex14/reports/awesome-reports/mochawesome.html
+          name: testresults
+          path: |
+          /home/runner/work/ex14/ex14/reports/awesome-reports/mochawesome.json
+          /home/runner/work/ex14/ex14/reports/awesome-reports/mochawesome.html
