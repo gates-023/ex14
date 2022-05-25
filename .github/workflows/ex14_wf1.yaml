@@ -18,10 +18,13 @@ jobs:
       - run: npm ci
       - run: npm run build --if-present
       - run: npm test
-      - name: Upload output file
+      - name: Upload output filejson
         uses: actions/upload-artifact@v3
         with:
-          name: testresults
-          path: |
-          /home/runner/work/ex14/ex14/reports/awesome-reports/mochawesome.json
-          /home/runner/work/ex14/ex14/reports/awesome-reports/mochawesome.html
+          name: testresultsjson
+          path: /home/runner/work/ex14/ex14/reports/awesome-reports/mochawesome.json
+      - name: Upload output filehtml
+        uses: actions/upload-artifact@v3
+        with:
+          name: testresultshtml
+          path: /home/runner/work/ex14/ex14/reports/awesome-reports/mochawesome.html
