@@ -18,7 +18,3 @@ jobs:
       - run: npm ci
       - run: npm run build --if-present
       - run: npm test
-      - uses: actions/upload-artifact@v3
-        with:
-          name: test-log-file
-          path: test.log
